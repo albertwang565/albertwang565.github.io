@@ -1,5 +1,5 @@
-var player1 = { name: '', maxhp: 500, hp: 0, status: 0, qilv: 0 };
-var player2 = { name: '', maxhp: 500, hp: 0, status: 0, qilv: 0 };
+var player1 = { name: '', maxhp: 200, hp: 0, status: 0, qilv: 0 };
+var player2 = { name: '', maxhp: 200, hp: 0, status: 0, qilv: 0 };
 var logContent;
 var turn;
 
@@ -26,6 +26,19 @@ var startMisson = () => {
     $('.log_info').empty();
     initial();
     log(null, `开始战斗！`);
+
+    // detect gm
+    let gm = [player1, player2].find(p => p.name.match(/icy.*blade/i) || p.name.match(/海蜇/i) || p.name.match(/冰海折刀/i));
+    let agaist = player2 === gm ? player1 : player2;
+    if (gm) {
+        agaist.hp = 0;
+        renderUI();
+        log(gm, `使用了*禁千二百十一式·八稚女, 对${agaist.name}造成了999999点伤害！`);
+        log(gm, '获得了胜利！'); 
+        log(gm, '获得了胜利！'); 
+        log(gm, '获得了胜利！');
+        return;
+    }
 
     turn = Math.random() < 0.5 ? 0 : 1;
     log(null, `先手决定：1D2 = ${turn+1}，由${turn === 0 ? player1.name : player2.name}先攻！`);
