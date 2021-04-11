@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Monster Hunter PK!</title>
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="mission_prepare">
+            <input type="text" id="player1_name" value="雷米"/>
+            <button class="start_pk" onclick="battle()">开始战斗！</button>
+            <input type="text" id="player2_name" value="不生气"/>
+        </div>
+        <div id="mission_process">
+            <div class="players_info">
+                <div class="player_info player1_info">
+                    <div class="name"></div>
+                    <div class="hp">
+                        <div class="rest_hp"></div>
+                    </div>
+                    <div class="status">
+                        <div class="qi"></div>
+                    </div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player_info player2_info">
+                    <div class="name"></div>
+                    <div class="hp">
+                        <div class="rest_hp"></div>
+                    </div>
+                    <div class="status">
+                        <div class="qi"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="log_info">
+
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+#mission_process {
+    border: 1px solid black;
+    width: 1200px;
+}
+
+#mission_process .players_info {
+    display: flex;
+}
+
+#mission_process .player_info {
+    padding: 5px 10px;
+    width: calc(50% - 50px);
+    flex-grow: 1;
+    height: 100px;
+    background-color: pink
+}
+
+#mission_process .player_info .name {
+    height: 40px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#mission_process .player_info .hp {
+    height: 20px;
+    border: 1px solid green;
+    position: relative;
+}
+
+#mission_process .player_info .status {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#mission_process .player2_info .status {
+    justify-content: flex-end;
+}
+
+#mission_process .player_info .qi {
+    height: 10px;
+    width: 50px;
+    background-color: grey;
+}
+
+#mission_process .player_info .qi[qilv='0'] {
+    background-color: grey;
+}
+
+#mission_process .player_info .qi[qilv='1'] {
+    background-color: white;
+}
+
+#mission_process .player_info .qi[qilv='2'] {
+    background-color: yellow;
+}
+
+#mission_process .player_info .qi[qilv='3'] {
+    background-color: red;
+}
+
+#mission_process .player_info .rest_hp {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: green;
+}
+
+#mission_process .player1_info .name {
+    text-align: left;
+    color: red;
+}
+
+#mission_process .player2_info .name {
+    text-align: right;
+    color: blue;
+}
+
+#mission_process .player2_info .rest_hp {
+    right: 0;
+}
+
+
+#mission_process .vs {
+    width: 100px;
+    flex-grow: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+#mission_process .log_info {
+    width: 100%;
+    height: 600px;
+    background-color: lightblue;
+    overflow-y: auto;
+}
