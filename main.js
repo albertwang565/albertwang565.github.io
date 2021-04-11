@@ -19,8 +19,8 @@ var battle = () => {
 
 var startMisson = () => {
     // hide prepare, show battle page
-    // document.getElementById('mission_prepare').hidden = true;
-    // document.getElementById('misson_process').hidden = false;
+    $('#mission_prepare').hide();
+    $('#mission_process').show();
 
     // start
     $('.log_info').empty();
