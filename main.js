@@ -32,6 +32,10 @@ var startMisson = () => {
     let totalTurns = 0;
     let battleInterval = setInterval(() => {
         if (player1.hp <= 0 || player2.hp <= 0) {
+            let winner = player2.hp <= 0 ? player1 : player2;  
+            log(winner, '获得了胜利！'); 
+            log(winner, '获得了胜利！'); 
+            log(winner, '获得了胜利！');
             clearInterval(battleInterval);
         } else {
             let player = [player1, player2][turn];
@@ -82,7 +86,7 @@ var startMisson = () => {
             totalTurns++;
             renderUI();
         }
-    }, 500);    
+    }, 500);
 }
 
 var initial = () => {
